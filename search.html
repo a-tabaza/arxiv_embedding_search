@@ -1,0 +1,33 @@
+<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<body class="bg-gray-200 p-8 w-fit">
+  <h1 class="text-4xl font-bold text-center w-fit">arXiv Search</h1>
+  <div class="grid-cols-6">
+  <input
+  class="mt-4 w-fit form-control"
+  type="search"
+  name="search"
+  placeholder="Begin Typing To arXiv Abstracts..."
+  hx-post="http://127.0.0.1:8000/search/"
+  hx-trigger="input changed delay:2s, search"
+  hx-target="#search-results"
+  hx-swap="innerHTML"
+  />
+  <div id="search-results" class="mt-4 w-fit"></div>
+</body>
+
+
+<!-- <div class="grid-flow-dense">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Test</th>
+        <th>Test</th>
+        <th>Test</th>
+      </tr>
+    </thead>
+    <tbody id="search-results"></tbody>
+  </table>
+</div> -->
+

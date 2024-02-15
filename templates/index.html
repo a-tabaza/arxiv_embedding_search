@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/tailwind.min.css') }}">
+    <title>HTMX Search Example</title>
+</head>
+<body class="bg-gray-200 p-8">
+    <form hx-post="/search" hx-target="#results" hx-swap="innerHTML">
+        <label for="query" class="block text-sm font-medium text-gray-700">Search Query:</label>
+        <input type="text" id="query" name="query" class="mt-1 p-2 border rounded-md w-full">
+        <button type="submit" class="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md">Search</button>
+    </form>
+    
+    <div id="results" class="mt-4"></div>
+
+    <script src="{{ url_for('static', path='js/htmx.min.js') }}"></script>
+</body>
+</html>

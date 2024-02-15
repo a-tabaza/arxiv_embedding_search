@@ -1,0 +1,14 @@
+<table class="mt-4 w-full">
+    <thead>
+        <tr>
+            <th class="py-2 px-4 bg-gray-700 text-white">Results</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in results %}
+            <tr>
+                <td class="py-2 px-4 border"><a href="{{ result }}">{{ result }}</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

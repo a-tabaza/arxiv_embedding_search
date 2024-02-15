@@ -1,0 +1,6 @@
+__pycache__/
+arxiv_abstracts/
+arxiv_titles/
+*.zip
+*.index
+*.json
